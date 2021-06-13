@@ -1,3 +1,8 @@
+function copyname() {
+  var text = document.getElementById("name-output").innerHTML;
+  navigator.clipboard.writeText(text);
+}
+
 function copyhex() {
   var text = document.getElementById("hex-output").innerHTML;
   navigator.clipboard.writeText(text);

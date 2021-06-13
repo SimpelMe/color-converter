@@ -20,6 +20,7 @@
     function colorChange(color) {
       var tiny = tinycolor(color);
 
+      $("#name-output").text(tiny.toName());
       $("#hex-output").text(tiny.toHexString());
       $("#hex8-output").text(tiny.toHex8String());
       $("#rgb-output").text(tiny.toRgbString());
@@ -80,6 +81,12 @@
               <div>
                 <input id='color-input' type="text" readonly />
               </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>
+              <button id='name-output' type="button" onclick="copyname()"></button>
             </td>
           </tr>
           <tr>
