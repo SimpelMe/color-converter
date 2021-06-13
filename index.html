@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes user-scalable=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Color Converter</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+  <script type='text/javascript' src='js/jquery-3.3.1.min.js'></script>
+  <script type='text/javascript' src='js/tinycolor.js'></script>
+  <script type='text/javascript' src='js/copy.js'></script>
+  <script type='text/javascript'>
+    function colorChange(color) {
+      var tiny = tinycolor(color);
+
+      $("#hex-output").text(tiny.toHexString());
+      $("#hex8-output").text(tiny.toHex8String());
+      $("#rgb-output").text(tiny.toRgbString());
+      $("#swift-output").text(tiny.toSwiftString());
+      $("#objective-c-output").text(tiny.toObjectivecString());
+      $("#xamarin-output").text(tiny.toXamarinString());
+      $("#float-output").text(tiny.toFloatString());
+      $("#hsl-output").text(tiny.toHslString());
+      $("#hsv-output").text(tiny.toHsvString());
+
+      $("#color-input").css("background-color",
+        tiny.toHexString()
+      );
+      $("#color-input").css("border-color",
+        tiny.toHexString()
+      );
+    }
+
+    $(function() {
+      $("#color").bind("keyup change", function() {
+        colorChange($(this).val());
+      });
+      colorChange({
+        r: 128,
+        g: 128,
+        b: 128,
+        a: 1.00
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>Color Converter</h1>
+      <a id="logo" class="cursordefault" href="/"><img src="../Simpel.png" alt="simpel icon" height="48" width="48"></a>
+      <a id="github" href="https://github.com/excalith/Colorizer" target="_blank" title="watch source code">
+        <img id="github-cat" src="../github-cat-white.png" alt="github logo">
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="datagrid">
+      <table>
+        <tbody>
+          <tr>
+            <td colspan="3" class="data-value data-input">
+              <div>
+                <input type="text" placeholder="Write your color code here" autofocus id='color' />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <div>
+                <input id='color-input' type="text" readonly />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Hex</td>
+            <td>
+              <button id='hex-output' type="button" onclick="copyhex()"></button>
+            </td>
+          </tr>
+          <tr>
+            <td>Hex8</td>
+            <td>
+              <button id='hex8-output' type="button" onclick="copyhex8()"></button>
+            </td>
+          </tr>
+          <tr>
+            <td>RGB</td>
+            <td>
+              <button id='rgb-output' type="button" onclick="copyrgb()"></button>
+            </td>
+          </tr>
+          <tr>
+            <td>Swift</td>
+            <td>
+              <button id='swift-output' type="button" onclick="copyswift()"></button>
+            </td>
+          </tr>
+          <tr>
+            <td>Objective-C</td>
+            <td>
+              <button id='objective-c-output' type="button" onclick="copyobjectivec()"></button>
+            </td>
+          </tr>
+          <tr>
+            <td>Xamarin&nbsp;(C#)</td>
+            <td>
+              <button id='xamarin-output' type="button" onclick="copyxamarin()"></button>
+            </td>
+          </tr>
+          <tr>
+            <td>Float</td>
+            <td>
+              <button id='float-output' type="button" onclick="copyfloat()"></button>
+            </td>
+          </tr>
+          <tr>
+            <td>HSL</td>
+            <td>
+              <button id='hsl-output' type="button" onclick="copyhsl()"></button>
+            </td>
+          </tr>
+          <tr>
+            <td>HSV</td>
+            <td>
+              <button id='hsv-output' type="button" onclick="copyhsv()"></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+
+</html>
