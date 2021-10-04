@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -44,9 +44,9 @@
         colorChange($(this).val());
       });
       colorChange({
-        r: 128,
-        g: 128,
-        b: 128,
+        r: 85,
+        g: 85,
+        b: 85,
         a: 1.00
       });
     });
@@ -58,8 +58,8 @@
   <header>
     <nav>
       <h1>Color Converter</h1>
-      <a id="logo" class="cursordefault" href="/"><img src="../Simpel.png" alt="simpel icon" height="48" width="48"></a>
-      <a id="github" href="https://github.com/excalith/Colorizer" target="_blank" title="watch source code">
+      <a id="logo" class="cursordefault" href="/" title="simpel.cc" aria-label="go to simpel dot c c"><img src="../Simpel.png" alt="simpel icon" height="48" width="48"></a>
+      <a id="github" href="https://github.com/excalith/Colorizer" target="_blank" title="watch source code" aria-label="go to source code at github dot com">
         <img id="github-cat" src="../github-cat-white.png" alt="github logo">
       </a>
     </nav>
@@ -79,68 +79,68 @@
           <tr>
             <td colspan="3">
               <div>
-                <input id='color-input' type="text" readonly />
+                <input id='color-input' type="text" readonly tabindex="-1"/>
               </div>
             </td>
           </tr>
           <tr>
             <td>Name</td>
             <td>
-              <button id='name-output' type="button" onclick="copyname()"></button>
+              <button id='name-output' type="button" onclick="copyname()" title="push to copy the color name"></button>
             </td>
           </tr>
           <tr>
             <td>Hex</td>
             <td>
-              <button id='hex-output' type="button" onclick="copyhex()"></button>
+              <button id='hex-output' type="button" onclick="copyhex()" title="push to copy the color in hex value"></button>
             </td>
           </tr>
           <tr>
             <td>Hex8</td>
             <td>
-              <button id='hex8-output' type="button" onclick="copyhex8()"></button>
+              <button id='hex8-output' type="button" onclick="copyhex8()" title="push to copy the color in hex 8 value"></button>
             </td>
           </tr>
           <tr>
             <td>RGB</td>
             <td>
-              <button id='rgb-output' type="button" onclick="copyrgb()"></button>
+              <button id='rgb-output' type="button" onclick="copyrgb()" title="push to copy the color in rgb value"></button>
             </td>
           </tr>
           <tr>
             <td>Swift</td>
             <td>
-              <button id='swift-output' type="button" onclick="copyswift()"></button>
+              <button id='swift-output' type="button" onclick="copyswift()" title="push to copy the color in swift code"></button>
             </td>
           </tr>
           <tr>
             <td>Objective-C</td>
             <td>
-              <button id='objective-c-output' type="button" onclick="copyobjectivec()"></button>
+              <button id='objective-c-output' type="button" onclick="copyobjectivec()" title="push to copy the color in objective-c code"></button>
             </td>
           </tr>
           <tr>
             <td>Xamarin&nbsp;(C#)</td>
             <td>
-              <button id='xamarin-output' type="button" onclick="copyxamarin()"></button>
+              <button id='xamarin-output' type="button" onclick="copyxamarin()" title="push to copy the color in c-sharp code"></button>
             </td>
           </tr>
           <tr>
             <td>Float</td>
             <td>
-              <button id='float-output' type="button" onclick="copyfloat()"></button>
+              <button id='float-output' type="button" onclick="copyfloat()" title="push to copy the color in float value"></button>
             </td>
           </tr>
           <tr>
             <td>HSL</td>
             <td>
-              <button id='hsl-output' type="button" onclick="copyhsl()"></button>
+              <button id='hsl-output' type="button" onclick="copyhsl()" title="push to copy the color in hsl value"></button>
             </td>
           </tr>
           <tr>
             <td>HSV</td>
             <td>
-              <button id='hsv-output' type="button" onclick="copyhsv()"></button>
+              <button id='hsv-output' type="button" onclick="copyhsv()" title="push to copy the color in hsv value"></button>
             </td>
           </tr>
         </tbody>

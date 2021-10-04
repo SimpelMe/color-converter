@@ -2,9 +2,14 @@ body {
   min-height: 50vh;
   font-family: helvetica, Arial, sans-serif;
   font-size: 2vmin;
-  background-color: #808080;
+  background-color: #555;
   color: white;
   margin: 3vmin 4vmin 2vmin 4vmin;
+}
+
+*:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
 }
 
 a {
@@ -45,11 +50,11 @@ tr {
 }
 
 tr:nth-child(even) {
-  background: #808080;
+  background: #505050;
 }
 
 tr:nth-child(odd) {
-  background: #858585;
+  background: #555555;
 }
 
 th {
@@ -89,25 +94,15 @@ button {
   color: white;
   text-align: left;
   border-color: white;
-  background-color: #606060;
+  background-color: #333;
 }
 
 input[type=text] {
   box-sizing: border-box;
-  border-color: #606060;
+  border-color: #333;
   width: 100%;
-  color: #606060;
+  color: #333;
   background-color: white;
-}
-
-:focus {
-  outline: none;
-  /* disable glowing at focused input[type=text] or textarea */
-}
-
-:active {
-  outline: none;
-  /* disable glowing at active input[type=submit], input[type=button] or button */
 }
 
 /* iPhone portait and landscape */
