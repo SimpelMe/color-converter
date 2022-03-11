@@ -7,9 +7,30 @@ body {
   margin: 3vmin 4vmin 2vmin 4vmin;
 }
 
+/* iPad portait */
+@media (max-width: 768px) {
+  body {
+    font-size: 3vmin;
+  }
+}
+
+/* iPhone landscape only */
+@media (max-width: 568px) {
+  body {
+    font-size: 4vmin;
+  }
+}
+
+/* iPhone portait only */
+@media (max-width: 320px) {
+  body {
+    font-size: 4vmin;
+  }
+}
+
 *:focus {
-    outline: 2px solid white;
-    outline-offset: 2px;
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
 
 a {
@@ -17,26 +38,27 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  padding-left: 60px;
-  line-height: 52px;
-  margin-top: 3vmin;
+header {
+  margin-bottom: 1.5em;
 }
 
-#logo {
-  float: left;
-  position: absolute;
-  top: 3vmin;
+nav {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7em;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;
 }
 
 #github {
-  position: absolute;
-  top: 3.3vmin;
-  right: 4vmin;
+  margin-left: auto;
 }
 
 #github-cat {
-  height: 4vh;
+  height: 1.5em;
 }
 
 table {
@@ -103,18 +125,4 @@ input[type=text] {
   width: 100%;
   color: #333;
   background-color: white;
-}
-
-/* iPhone portait and landscape */
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 2.9vmin;
-  }
-}
-
-/* iPhone portait only */
-@media screen and (max-width: 320px) {
-  body {
-    font-size: 5vmin;
-  }
 }
