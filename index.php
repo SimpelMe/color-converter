@@ -2,16 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="robots" content="noindex,nofollow">
-  <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes user-scalable=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <?php include dirname($_SERVER['DOCUMENT_ROOT']) . "/simpel.cc/php/head.php"; ?>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Color Converter</title>
   <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
   <script type='text/javascript' src='js/jquery-3.3.1.min.js'></script>
   <script type='text/javascript' src='js/tinycolor.js'></script>
@@ -56,13 +48,7 @@
 
 <body>
   <header>
-    <nav>
-      <a id="logo" class="cursordefault" href="/" title="simpel.cc" aria-label="go to simpel dot c c"><img src="../Simpel.png" alt="simpel icon" height="48" width="48"></a>
-      <h1>Color Converter</h1>
-      <a id="github" href="https://github.com/excalith/Colorizer" target="_blank" title="watch source code" aria-label="go to source code at github dot com">
-        <img id="github-cat" src="../github.svg" alt="github logo">
-      </a>
-    </nav>
+    <?php include dirname($_SERVER['DOCUMENT_ROOT']) . "/simpel.cc/php/header.php"; ?>
   </header>
 
   <main>
