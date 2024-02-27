@@ -786,7 +786,7 @@
             whitesmoke: "f5f5f5",
             yellow: "ff0",
             yellowgreen: "9acd32",
-            ndr1: "0d1754",
+            ndr1: "0c1754",
             ndr2: "0e57ab",
             ndr3: "fcf7b8",
             ndr4: "ff6a56",
